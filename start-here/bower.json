@@ -1,5 +1,5 @@
 {
-  "name": "start-here",
+  "name": "coffeeshop-app",
   "dependencies": {
     "ember": "2.3.0",
     "ember-cli-shims": "0.1.0",
@@ -10,7 +10,9 @@
     "loader.js": "^3.5.0",
     "pretender": "~0.10.1",
     "lodash": "~3.7.0",
-    "Faker": "~3.0.0"
+    "Faker": "~3.0.0",
+    "bootstrap": "~4.0.0-alpha.2",
+    "font-awesome": "fontawesome#~4.5.0"
   },
   "resolutions": {
     "ember": "2.2.0"

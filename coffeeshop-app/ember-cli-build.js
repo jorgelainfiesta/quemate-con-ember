@@ -6,7 +6,6 @@ module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
     // Add options here
   });
-
   // Use `app.import` to add additional libraries to the generated
   // output files.
   //
@@ -19,6 +18,25 @@ module.exports = function(defaults) {
   // modules that you would like to import into your application
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
+
+  app.import('bower_components/bootstrap/dist/css/bootstrap.css');
+
+  app.import({
+    development: 'bower_components/font-awesome/css/font-awesome.css',
+    production:  'bower_components/font-awesome/css/font-awesome.min.css'
+  });
+
+  [
+    'FontAwesome.otf',
+    'fontawesome-webfont.svg',
+    'fontawesome-webfont.woff',
+    'fontawesome-webfont.eot',
+    'fontawesome-webfont.ttf',
+    'fontawesome-webfont.woff2'
+  ].forEach(function(font) {
+    var file = 'bower_components/font-awesome/fonts/' + font;
+    app.import(file, { destDir: 'fonts' });
+  });
 
   return app.toTree();
 };
